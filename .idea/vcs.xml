@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Android" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Android_Lifecycle" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Android_Notifications" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Android_Sprint2_Challenge" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ImageViewer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Lambda-Hello" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Newsreader" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Pets" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Sprint-Android-Networking-Assignments" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Sprint-Android-Networking-Assignments/M04/Assignment/ServicesAndBroadcasts" vcs="Git" />
+  </component>
+</project>

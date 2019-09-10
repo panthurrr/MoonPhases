@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Newsreader</string>
+    <string name="insert_username">Insert username</string>
+    <string name="insert_password">Insert password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="register">Register</string>
+    <string name="beach_cliff">Beach cliff</string>
+    <string name="alley_architecture">Alley Architecture</string>
+    <string name="abstract_art">Abstract art</string>
+    <string name="classic_automobile">Classic Automobile</string>
+    <string name="aerial_photography">aerial_photography</string>
+    <string name="bridge_architecture">Bridge Architecture</string>
+    <string name="canada_day">Canada Day</string>
+    <string name="flora_bossom">Flora Blossom</string>
+    <string name="colorful_colors">Colorful colors</string>
+    <string name="coconut_trees">Coconut Trees</string>
+    <string name="colorful_houses">Colorful Houses</string>
+    <string name="astrophotography">Astrophotography</string>
+
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed leo lacinia, laoreet erat vitae, imperdiet nisl. Vestibulum a risus a magna lobortis porttitor et eu lacus. Ut tellus dui, pretium sed euismod vel, imperdiet nec purus. Etiam dolor augue, finibus non varius sit amet, finibus vitae enim. Aenean porttitor velit eget fringilla congue. Morbi porta, diam a facilisis ultricies, lacus orci volutpat eros, eu scelerisque augue justo vel diam. In finibus mattis nisl sed mattis. In ipsum neque, viverra ut faucibus id, commodo vitae mi. Nunc ex diam, fermentum non mauris vel, aliquet hendrerit dui. Etiam egestas nisi sed felis condimentum, sit amet venenatis ex lacinia. Integer porta fermentum tempor. Nunc at ligula quis purus tristique scelerisque. Pellentesque neque orci, dictum vitae orci vel, suscipit maximus neque. Sed auctor risus ac magna pharetra feugiat.</string>
+
+
+</resources>
