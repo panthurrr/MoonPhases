@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../EnerLog.iml" filepath="$PROJECT_DIR$/../EnerLog.iml" group="EnerLog" />
+      <module fileurl="file://$PROJECT_DIR$/../MaterialCalendarView/MaterialCalendarView.iml" filepath="$PROJECT_DIR$/../MaterialCalendarView/MaterialCalendarView.iml" group="EnerLog/MaterialCalendarView" />
+      <module fileurl="file://$PROJECT_DIR$/app.iml" filepath="$PROJECT_DIR$/app.iml" group="EnerLog/app" />
+    </modules>
+  </component>
+</project>
