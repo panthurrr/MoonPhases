@@ -7,6 +7,7 @@ import android.content.IntentFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 import java.text.SimpleDateFormat
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onStop() {
-        unregisterReceiver(broadcastReceiver)
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(broadcastReceiver);
         super.onStop()
     }
 
@@ -37,7 +38,12 @@ class MainActivity : AppCompatActivity() {
         tv_month_name.text = monthName
 
         (0..calendar.getActualMaximum(Calendar.DAY_OF_MONTH)).forEach { day->
-            dayData.add(DayData(day, MoonPhase.findByValue((0..7).random())!!))
+            if(day == Calendar.getInstance().get(Calendar.DAY_OF_MONTH)) {
+                MoonPhaseService.currentMoonPhase?.let { phase->
+                    dayData.add(DayData(day, phase))
+                }
+            } else
+                dayData.add(DayData(day, MoonPhase.findByValue((0..7).random())!!))
         }
         calendarListAdapter = CalendarListAdapter(dayData)
 
@@ -53,11 +59,12 @@ class MainActivity : AppCompatActivity() {
                 intent?.let{
                     //update UI to reflect the change in today's current moon phase
                     val currentDayOfMonth = Calendar.getInstance().get(Calendar.DAY_OF_MONTH)
-                    dayData[currentDayOfMonth-1].moonPhase = it.getSerializableExtra("CurrentMoonPhase") as MoonPhase
-                    calendarListAdapter.notifyItemChanged(currentDayOfMonth - 1)
+                    dayData[currentDayOfMonth].moonPhase = it.getSerializableExtra("CurrentMoonPhase") as MoonPhase
+                    calendarListAdapter.notifyItemChanged(currentDayOfMonth)
                 }
             }
         }
-        registerReceiver(broadcastReceiver, IntentFilter("notificationAction"))
+        LocalBroadcastManager.getInstance(this).registerReceiver(
+            broadcastReceiver, IntentFilter("notificationAction"))
     }
 }

@@ -25,6 +25,10 @@ class MoonPhaseService: Service() {
             }
         }
 
+    companion object {
+        var currentMoonPhase: MoonPhase? = null
+    }
+
     override fun onCreate() {
         notificationManager = getSystemService(android.content.Context.NOTIFICATION_SERVICE) as android.app.NotificationManager
         channelId = getString(R.string.notification_channel)
@@ -56,7 +60,7 @@ class MoonPhaseService: Service() {
                     .setPriority(Notification.PRIORITY_DEFAULT)
 
         val currentRandomMoonPhase = MoonPhase.findByValue((0..7).random())!!
-
+        currentMoonPhase = currentRandomMoonPhase
         notificationBuilder
             .setSmallIcon(currentRandomMoonPhase.drawableRes)
             .setOngoing(true)
