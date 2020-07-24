@@ -26,18 +26,6 @@ class CalendarListAdapter(private val dayData: List<DayData>): RecyclerView.Adap
 
     override fun onBindViewHolder(holder: CalendarViewHolder, position: Int) {
         holder.tvDay.text = "$position"
-        holder.imgMoonPhase.setImageDrawable(
-            when(dayData[position].moonPhase) {
-                0 -> context.getDrawable(R.drawable.ic_first_quarter)
-                1 -> context.getDrawable(R.drawable.ic_full_moon)
-                2 -> context.getDrawable(R.drawable.ic_new_moon)
-                3 -> context.getDrawable(R.drawable.ic_third_quarter)
-                4 -> context.getDrawable(R.drawable.ic_waning_crescent)
-                5 -> context.getDrawable(R.drawable.ic_waning_gibbous)
-                6 -> context.getDrawable(R.drawable.ic_waxing_crescent)
-                7 -> context.getDrawable(R.drawable.ic_waxing_gibbous)
-                else -> null
-            }
-        )
+        holder.imgMoonPhase.setImageDrawable(context.getDrawable(dayData[position].moonPhase.drawableRes))
     }
 }

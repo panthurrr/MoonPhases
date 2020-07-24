@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MoonPhases</string>
+    <string name="notification_channel">NOTIFICATION_CHANNEL</string>
 </resources>
