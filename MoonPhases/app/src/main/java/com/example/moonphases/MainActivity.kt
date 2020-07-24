@@ -26,6 +26,16 @@ class MainActivity : AppCompatActivity() {
         initRecyclerView()
     }
 
+    override fun onResume() {
+        if(!MoonPhaseService.serviceIsOn){
+            val i = Intent("com.example.moonphases.MoonPhaseService")
+            i.setClass(applicationContext, MoonPhaseService::class.java)
+            applicationContext.startService(i)
+            registerReceiver()
+        }
+        super.onResume()
+    }
+
     override fun onStop() {
         LocalBroadcastManager.getInstance(this).unregisterReceiver(broadcastReceiver);
         super.onStop()

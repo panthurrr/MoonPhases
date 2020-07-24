@@ -27,9 +27,11 @@ class MoonPhaseService: Service() {
 
     companion object {
         var currentMoonPhase: MoonPhase? = null
+        var serviceIsOn = false
     }
 
     override fun onCreate() {
+        serviceIsOn = true
         notificationManager = getSystemService(android.content.Context.NOTIFICATION_SERVICE) as android.app.NotificationManager
         channelId = getString(R.string.notification_channel)
         createNotificationChannel()
@@ -39,6 +41,11 @@ class MoonPhaseService: Service() {
 
     override fun onBind(intent: Intent?): IBinder? {
         return null
+    }
+
+    override fun onDestroy() {
+        serviceIsOn = false
+        super.onDestroy()
     }
 
     private fun createNotificationChannel() {
